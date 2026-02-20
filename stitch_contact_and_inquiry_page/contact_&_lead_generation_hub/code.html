@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact &amp; Lead Generation Hub - AgriTech India</title>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d411",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom map filter for dark mode integration */
+        .map-filter {
+            filter: grayscale(100%) invert(92%) contrast(83%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden antialiased selection:bg-primary/30 selection:text-primary">
+<div class="flex flex-col min-h-screen">
+<!-- TopNavBar Component -->
+<header class="border-b border-white/10 bg-[#112211]">
+<div class="flex items-center justify-between px-6 py-4 lg:px-10 max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-4xl">agriculture</span>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">AgriTech India</h2>
+</div>
+<div class="hidden lg:flex items-center gap-10">
+<nav class="flex items-center gap-8">
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Products</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Dealers</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">About Us</a>
+<a class="text-white text-sm font-medium leading-normal border-b-2 border-primary pb-0.5" href="#">Contact</a>
+</nav>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-primary/90 transition-colors text-[#112211] text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Get Quote</span>
+</button>
+</div>
+<button class="lg:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero / Split Section -->
+<div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
+<!-- Left Column: Lead Generation Form -->
+<div class="flex flex-col">
+<div class="mb-8">
+<h1 class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">Let's Cultivate <br/>Success Together</h1>
+<p class="text-white/60 text-lg">Whether you're looking for a new tractor or interested in becoming a dealer, our team is here to assist you.</p>
+</div>
+<div class="bg-[#192b19] border border-white/5 rounded-2xl p-6 md:p-8 shadow-2xl shadow-black/40">
+<!-- Toggle -->
+<div class="flex p-1 bg-[#102210] rounded-lg mb-8 relative">
+<label class="flex-1 text-center cursor-pointer relative z-10">
+<input checked="" class="peer sr-only" name="inquiry_type" type="radio" value="general"/>
+<div class="py-2.5 px-4 text-sm font-medium text-white/60 rounded-md transition-all duration-300 peer-checked:text-[#112211] peer-checked:bg-primary peer-checked:shadow-sm">General Inquiry</div>
+</label>
+<label class="flex-1 text-center cursor-pointer relative z-10">
+<input class="peer sr-only" name="inquiry_type" type="radio" value="dealer"/>
+<div class="py-2.5 px-4 text-sm font-medium text-white/60 rounded-md transition-all duration-300 peer-checked:text-[#112211] peer-checked:bg-primary peer-checked:shadow-sm">Dealer Inquiry</div>
+</label>
+</div>
+<form class="space-y-5">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div class="space-y-2">
+<label class="text-sm font-medium text-white/80 ml-1">Full Name</label>
+<div class="relative">
+<input class="w-full bg-[#102210] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Enter your name" type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-white/30 text-lg">person</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-white/80 ml-1">Phone Number</label>
+<div class="relative">
+<input class="w-full bg-[#102210] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="+91 98765 43210" type="tel"/>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-white/30 text-lg">call</span>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-white/80 ml-1">Email Address</label>
+<div class="relative">
+<input class="w-full bg-[#102210] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="email@example.com" type="email"/>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-white/30 text-lg">mail</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-white/80 ml-1">Equipment Interest</label>
+<div class="relative">
+<select class="w-full bg-[#102210] border border-white/10 rounded-lg px-4 py-3 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none appearance-none transition-all cursor-pointer">
+<option disabled="" selected="" value="">Select equipment type</option>
+<option value="tractor_hp_high">High HP Tractors (50HP+)</option>
+<option value="tractor_hp_low">Compact Tractors</option>
+<option value="harvesters">Combine Harvesters</option>
+<option value="rotavators">Rotavators</option>
+<option value="seeders">Seeders &amp; Planters</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-white/30 text-lg pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-white/80 ml-1">Message</label>
+<textarea class="w-full bg-[#102210] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none" placeholder="Tell us about your requirements..." rows="3"></textarea>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-[#112211] font-bold py-3.5 px-6 rounded-lg transition-all transform active:scale-[0.98] shadow-lg shadow-primary/20 flex items-center justify-center gap-2 mt-2" type="button">
+<span>Send Inquiry</span>
+<span class="material-symbols-outlined text-lg">send</span>
+</button>
+</form>
+</div>
+</div>
+<!-- Right Column: Business Info -->
+<div class="flex flex-col justify-center lg:pl-8">
+<div class="mb-12">
+<h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+<span class="flex items-center justify-center size-10 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">storefront</span>
+</span>
+                                Corporate Headquarters
+                            </h2>
+<address class="not-italic text-white/70 text-lg leading-relaxed mb-8 pl-14">
+                                AgriTech India Pvt. Ltd.<br/>
+                                Plot No. 45, Industrial Area Phase II,<br/>
+                                Chandigarh, Punjab 160002<br/>
+                                India
+                            </address>
+<div class="space-y-6 pl-14">
+<div class="flex flex-col gap-1">
+<span class="text-sm text-white/40 uppercase tracking-wider font-semibold">Sales Support</span>
+<a class="text-2xl font-bold text-white hover:text-primary transition-colors flex items-center gap-2 group" href="tel:+919876543210">
+                                        +91 98765 43210
+                                        <span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0 text-xl">arrow_outward</span>
+</a>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-sm text-white/40 uppercase tracking-wider font-semibold">Dealer Support</span>
+<a class="text-xl font-bold text-white hover:text-primary transition-colors" href="tel:+919876543211">
+                                        +91 98765 43211
+                                    </a>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-sm text-white/40 uppercase tracking-wider font-semibold">Email</span>
+<a class="text-lg font-medium text-white hover:text-primary transition-colors" href="mailto:contact@agritechindia.com">
+                                        contact@agritechindia.com
+                                    </a>
+</div>
+</div>
+</div>
+<div class="bg-[#192b19]/50 border border-white/5 rounded-xl p-6">
+<h3 class="text-white font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">schedule</span>
+                                Operating Hours
+                            </h3>
+<div class="space-y-3 text-sm text-white/70">
+<div class="flex justify-between border-b border-white/5 pb-2">
+<span>Monday - Friday</span>
+<span class="text-white font-medium">9:00 AM - 7:00 PM</span>
+</div>
+<div class="flex justify-between border-b border-white/5 pb-2">
+<span>Saturday</span>
+<span class="text-white font-medium">9:00 AM - 4:00 PM</span>
+</div>
+<div class="flex justify-between">
+<span>Sunday</span>
+<span class="text-primary font-medium">Closed</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Full Width Map Section -->
+<div class="w-full h-[450px] relative bg-[#102210] border-t border-white/5">
+<div class="absolute inset-0 w-full h-full pointer-events-none z-10 bg-gradient-to-t from-[#102210] to-transparent h-24 bottom-0"></div>
+<!-- Google Maps Embed -->
+<iframe allowfullscreen="" class="map-filter opacity-80 hover:opacity-100 transition-opacity duration-500" height="100%" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.566810235319!2d76.7794!3d30.7333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed0be66ec96b%3A0xa5ff47f55f0fdef5!2sChandigarh%2C%20India!5e0!3m2!1sen!2sus!4v1625680000000!5m2!1sen!2sus" style="border:0;" title="AgriTech India Headquarters Location Map" width="100%">
+</iframe>
+<!-- Floating Card on Map (Optional Detail) -->
+<div class="absolute top-8 left-8 hidden md:block bg-[#112211] border border-white/10 p-4 rounded-lg shadow-xl z-20 max-w-xs">
+<h4 class="text-white font-bold text-sm mb-1">Visit our Showroom</h4>
+<p class="text-white/60 text-xs mb-3">Experience our latest machinery firsthand.</p>
+<a class="text-primary text-xs font-bold flex items-center gap-1 hover:underline" href="https://maps.google.com" target="_blank">
+                        Get Directions <span class="material-symbols-outlined text-sm">directions</span>
+</a>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0b180b] border-t border-white/5 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<!-- Brand Summary -->
+<div>
+<div class="flex items-center gap-2 mb-6 text-white">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined text-2xl">agriculture</span>
+</div>
+<span class="text-lg font-bold">AgriTech India</span>
+</div>
+<p class="text-white/50 text-sm leading-relaxed mb-6">
+                            Empowering Indian farmers since 1995 with world-class agricultural machinery. Built for the rugged soil, designed for a prosperous future.
+                        </p>
+<div class="flex gap-4">
+<a class="size-10 rounded-full bg-white/5 flex items-center justify-center text-white/70 hover:bg-primary hover:text-[#112211] transition-all" href="#">
+<!-- Facebook Icon Placeholder (using Material Symbol as generic social) -->
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="size-10 rounded-full bg-white/5 flex items-center justify-center text-white/70 hover:bg-primary hover:text-[#112211] transition-all" href="#">
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+<a class="size-10 rounded-full bg-white/5 flex items-center justify-center text-white/70 hover:bg-primary hover:text-[#112211] transition-all" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h4 class="text-white font-bold mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-white/60 hover:text-primary text-sm transition-colors" href="#">Our Products</a></li>
+<li><a class="text-white/60 hover:text-primary text-sm transition-colors" href="#">Dealer Network</a></li>
+<li><a class="text-white/60 hover:text-primary text-sm transition-colors" href="#">Service &amp; Support</a></li>
+<li><a class="text-white/60 hover:text-primary text-sm transition-colors" href="#">Finance Options</a></li>
+<li><a class="text-white/60 hover:text-primary text-sm transition-colors" href="#">Latest News</a></li>
+</ul>
+</div>
+<!-- Product Categories -->
+<div>
+<h4 class="text-white font-bold mb-6">Equipment</h4>
+<ul class="space-y-3">
+<li><a class="text-white/60 hover:text-primary text-sm transition-colors" href="#">Heavy Duty Tractors</a></li>
+<li><a class="text-white/60 hover:text-primary text-sm transition-colors" href="#">Combine Harvesters</a></li>
+<li><a class="text-white/60 hover:text-primary text-sm transition-colors" href="#">Rotary Tillers</a></li>
+<li><a class="text-white/60 hover:text-primary text-sm transition-colors" href="#">Power Weeders</a></li>
+<li><a class="text-white/60 hover:text-primary text-sm transition-colors" href="#">Spare Parts</a></li>
+</ul>
+</div>
+<!-- Newsletter -->
+<div>
+<h4 class="text-white font-bold mb-6">Stay Updated</h4>
+<p class="text-white/50 text-sm mb-4">Subscribe to our newsletter for latest farming tips and product launches.</p>
+<form class="flex flex-col gap-2">
+<input class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm text-white focus:outline-none focus:border-primary placeholder-white/20" placeholder="Your email address" type="email"/>
+<button class="bg-primary text-[#112211] text-sm font-bold py-2 rounded-lg hover:bg-primary/90 transition-colors">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-white/30 text-xs">© 2024 AgriTech India Pvt. Ltd. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-white/30 hover:text-white text-xs transition-colors" href="#">Privacy Policy</a>
+<a class="text-white/30 hover:text-white text-xs transition-colors" href="#">Terms of Service</a>
+<a class="text-white/30 hover:text-white text-xs transition-colors" href="#">Sitemap</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

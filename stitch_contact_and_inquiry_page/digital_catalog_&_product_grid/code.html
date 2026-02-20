@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgriTech India - Premium Equipment Catalog</title>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#194d2d",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#141e18",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "sans": ["Public Sans", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#101813] font-display min-h-screen flex flex-col">
+<!-- Header / Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#eaf1ec] px-10 py-4 bg-white sticky top-0 z-50">
+<div class="flex items-center gap-4 text-[#101813]">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-4xl">agriculture</span>
+</div>
+<h2 class="text-[#101813] text-xl font-bold leading-tight tracking-[-0.015em]">AgriTech India</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-[#101813] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Products</a>
+<a class="text-[#101813] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-[#101813] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#143d24] transition-colors shadow-sm">
+<span class="truncate">Get a Quote</span>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="bg-primary/5 py-16 px-4 sm:px-10 lg:px-40">
+<div class="max-w-7xl mx-auto text-center space-y-4">
+<span class="text-primary font-bold tracking-wider text-sm uppercase">Premium Machinery</span>
+<h1 class="text-4xl md:text-5xl font-black text-[#101813] tracking-tight">Precision Agriculture Equipment</h1>
+<p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    Discover our range of high-performance tractor attachments designed specifically for rugged farming conditions. Engineered for durability and efficiency.
+                </p>
+</div>
+</section>
+<!-- Filter Bar -->
+<div class="sticky top-[73px] z-40 bg-background-light/95 backdrop-blur-sm border-b border-[#eaf1ec] py-4 px-4 sm:px-10 lg:px-40 overflow-x-auto">
+<div class="max-w-7xl mx-auto flex gap-3 min-w-max">
+<button class="px-6 py-2 rounded-full bg-primary text-white font-medium text-sm shadow-sm transition-all">All Equipment</button>
+<button class="px-6 py-2 rounded-full bg-white border border-[#eaf1ec] text-[#5c8a6d] hover:border-primary hover:text-primary font-medium text-sm transition-all">Tractor Trolleys</button>
+<button class="px-6 py-2 rounded-full bg-white border border-[#eaf1ec] text-[#5c8a6d] hover:border-primary hover:text-primary font-medium text-sm transition-all">Cultivators</button>
+<button class="px-6 py-2 rounded-full bg-white border border-[#eaf1ec] text-[#5c8a6d] hover:border-primary hover:text-primary font-medium text-sm transition-all">Rotavators</button>
+<button class="px-6 py-2 rounded-full bg-white border border-[#eaf1ec] text-[#5c8a6d] hover:border-primary hover:text-primary font-medium text-sm transition-all">Seed Drills</button>
+<button class="px-6 py-2 rounded-full bg-white border border-[#eaf1ec] text-[#5c8a6d] hover:border-primary hover:text-primary font-medium text-sm transition-all">Harrows</button>
+</div>
+</div>
+<!-- Product Grid -->
+<section class="py-12 px-4 sm:px-10 lg:px-40 bg-white">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Product Card 1 -->
+<div class="group hover-lift border border-[#eaf1ec] rounded-xl overflow-hidden bg-background-light flex flex-col">
+<div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+<img alt="Heavy duty red tractor trolley" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9SclqO9DMTcLS0rvCn7lza9Rz3Px4vK4qFM4Ds8hU4eX0nbA8KRd3bbhtn_60pqFUpHKojt8ELY9toXfczEzKbPrmswiiaOhkf7VF_qqqrLwb9hCyNy-5akypEPbm21fJjPGHGJhUYom02a4Ujth1vKlTGmKD_Kcue8ryHtYK_B5Mqf_v7mvrQH-7zMAhkcuh919f9mxmf-CxjNDmeeJO_EYUPbS28TYMuLPvIQsyBiaAbCcS81Z1MjKI483X_vq4EWCdhvLqMThB"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm">
+                            Best Seller
+                        </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="mb-4">
+<span class="text-xs font-bold text-[#5c8a6d] uppercase tracking-wider">Transport</span>
+<h3 class="text-xl font-bold text-[#101813] mt-1 group-hover:text-primary transition-colors">10-Ton Hydraulic Tipper</h3>
+</div>
+<ul class="space-y-3 mb-8 flex-grow">
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>Reinforced chassis for heavy loads</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>Dual-acting hydraulic pump system</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>Compatible with 50HP+ tractors</span>
+</li>
+</ul>
+<div class="flex items-center gap-3 pt-4 border-t border-[#eaf1ec]">
+<button class="flex-1 bg-primary text-white py-2.5 px-4 rounded-lg text-sm font-bold hover:bg-[#143d24] transition-colors shadow-sm flex items-center justify-center gap-2">
+                                Request Quote
+                            </button>
+<button class="p-2.5 rounded-lg border border-[#eaf1ec] text-[#5c8a6d] hover:bg-primary/5 hover:text-primary hover:border-primary transition-colors" title="View Details">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group hover-lift border border-[#eaf1ec] rounded-xl overflow-hidden bg-background-light flex flex-col">
+<div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+<img alt="Large agricultural cultivator in field" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAma0-QLs9MM0hg3Q36BV2XLygYT5ygjvvN4qswMC5d2qo_092JTu8jYPNfruEXJnwwF13J9_ODDeT7HWv4d3I3EfVYwNi4E5xF_EexrYQFU8EbyV4KkWSt1lI8CK449kzhrQBDwc980FYk5wvNUptnkLfxws3JOhYcO5tpX3YSvC7wfhv0YXc-luc5vZ17yPL67uYUwq6hzdizEFVBOjcIaEf1AWZQ_LxdsX_PpOoN8p9SysKvgxS08S3mTUORXetrpZ1ijuROtzE"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="mb-4">
+<span class="text-xs font-bold text-[#5c8a6d] uppercase tracking-wider">Soil Preparation</span>
+<h3 class="text-xl font-bold text-[#101813] mt-1 group-hover:text-primary transition-colors">Heavy Duty Cultivator</h3>
+</div>
+<ul class="space-y-3 mb-8 flex-grow">
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>9-tine spring loaded assembly</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>Ideal for deep soil penetration</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>High carbon steel shovels</span>
+</li>
+</ul>
+<div class="flex items-center gap-3 pt-4 border-t border-[#eaf1ec]">
+<button class="flex-1 bg-primary text-white py-2.5 px-4 rounded-lg text-sm font-bold hover:bg-[#143d24] transition-colors shadow-sm flex items-center justify-center gap-2">
+                                Request Quote
+                            </button>
+<button class="p-2.5 rounded-lg border border-[#eaf1ec] text-[#5c8a6d] hover:bg-primary/5 hover:text-primary hover:border-primary transition-colors" title="View Details">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group hover-lift border border-[#eaf1ec] rounded-xl overflow-hidden bg-background-light flex flex-col">
+<div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+<img alt="Rotary tiller attached to tractor" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAipFZfa1X5uGeVtndlgXJsgdQ55jXHu-VRTi1rBdvH_yOFGxqXqtNSuscPBdS9PvEU_k7-zO08RKiOK1SV3C4X5jPG0saXL6azI8wvKv_XwDHxMa_kIlSMhzSqip9dAiq6jp0uo1LCJHhrEVJchGPPnlKyAs2OTDHXUvLwq7i4epQVmXonel7nE5W16_BOFYWsSo8mlbjEwXEN2xbf6UK6UQLGfGCwmFYWMwkS41YtuP6DvYujCBCU64Q1-enT4HCouAtazdEe8ZR7"/>
+<div class="absolute top-4 right-4 bg-primary/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-white shadow-sm">
+                            New Arrival
+                        </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="mb-4">
+<span class="text-xs font-bold text-[#5c8a6d] uppercase tracking-wider">Tillage</span>
+<h3 class="text-xl font-bold text-[#101813] mt-1 group-hover:text-primary transition-colors">7ft Rotary Tiller</h3>
+</div>
+<ul class="space-y-3 mb-8 flex-grow">
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>Multi-speed gearbox included</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>L-type blades for efficient mixing</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>Adjustable depth skid shoes</span>
+</li>
+</ul>
+<div class="flex items-center gap-3 pt-4 border-t border-[#eaf1ec]">
+<button class="flex-1 bg-primary text-white py-2.5 px-4 rounded-lg text-sm font-bold hover:bg-[#143d24] transition-colors shadow-sm flex items-center justify-center gap-2">
+                                Request Quote
+                            </button>
+<button class="p-2.5 rounded-lg border border-[#eaf1ec] text-[#5c8a6d] hover:bg-primary/5 hover:text-primary hover:border-primary transition-colors" title="View Details">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group hover-lift border border-[#eaf1ec] rounded-xl overflow-hidden bg-background-light flex flex-col">
+<div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+<img alt="Farm seed drill machine close up" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADI1ZfAQU389YbHXypSfBdGWqpIV0mcSC6wROX-bxiyxwO-cZDmTbK_AG46VgLflM61v97s9pAPk3HLXOjm5jp9CxAu6xqnS4yiawvB5sEmiZ9uPHV1PFxNjR1R6yuTn7iJyxMcuYnRTI6OJcHVmNTwNneGmFl5ad8G6rHMySgJPcAkyya6yBTj_ZAOZKLbl7v7dRLKqY9luDgh798QXHTH-vn_QmdfjFqwKNLLFd--2TOhaYQbHKJDf5OpZkKgaLxW5Ognc2LospW"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="mb-4">
+<span class="text-xs font-bold text-[#5c8a6d] uppercase tracking-wider">Sowing</span>
+<h3 class="text-xl font-bold text-[#101813] mt-1 group-hover:text-primary transition-colors">Automatic Seed Drill</h3>
+</div>
+<ul class="space-y-3 mb-8 flex-grow">
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>Precise seed and fertilizer metering</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>Adjustable row spacing (7-9 rows)</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>Rust-proof galvanized seed box</span>
+</li>
+</ul>
+<div class="flex items-center gap-3 pt-4 border-t border-[#eaf1ec]">
+<button class="flex-1 bg-primary text-white py-2.5 px-4 rounded-lg text-sm font-bold hover:bg-[#143d24] transition-colors shadow-sm flex items-center justify-center gap-2">
+                                Request Quote
+                            </button>
+<button class="p-2.5 rounded-lg border border-[#eaf1ec] text-[#5c8a6d] hover:bg-primary/5 hover:text-primary hover:border-primary transition-colors" title="View Details">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group hover-lift border border-[#eaf1ec] rounded-xl overflow-hidden bg-background-light flex flex-col">
+<div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+<img alt="Disc harrow agricultural equipment" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7XeiGb_oVTbnsFNUNyPjqJigpP2wkXxorb71C2G1rMbxJBs6roARIWEjOgdCv_enIK8KwyIzRXq6albIbft-CwaNjtEhAc5sDAB2KoT7JxjXlkK-mS7GoZHJG1HtJNmxFqEu_4CzbJMd09a3NblMJB50Z4kL3IY-086YGZaH_v6TBnW0E-3a21HB5nFvJOPJCR3rVRU6Z8Q3OuljNjpOWzu75cyUdV5YDUTHuhDaAblpcx5yaGgUM_9UyU3xw9K3oAhYj1YxYMt1M"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="mb-4">
+<span class="text-xs font-bold text-[#5c8a6d] uppercase tracking-wider">Soil Preparation</span>
+<h3 class="text-xl font-bold text-[#101813] mt-1 group-hover:text-primary transition-colors">Hydraulic Disc Harrow</h3>
+</div>
+<ul class="space-y-3 mb-8 flex-grow">
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>16-disc heavy duty configuration</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>Boron steel discs for longevity</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>Hydraulic folding for transport</span>
+</li>
+</ul>
+<div class="flex items-center gap-3 pt-4 border-t border-[#eaf1ec]">
+<button class="flex-1 bg-primary text-white py-2.5 px-4 rounded-lg text-sm font-bold hover:bg-[#143d24] transition-colors shadow-sm flex items-center justify-center gap-2">
+                                Request Quote
+                            </button>
+<button class="p-2.5 rounded-lg border border-[#eaf1ec] text-[#5c8a6d] hover:bg-primary/5 hover:text-primary hover:border-primary transition-colors" title="View Details">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group hover-lift border border-[#eaf1ec] rounded-xl overflow-hidden bg-background-light flex flex-col">
+<div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+<img alt="Laser land leveler machine in field" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHQeA7GWJc2V2bL1Vy7Mxk26IMdm7SQg3Bwy0-PqeuVaeba4HVE53rBdwvQgLfICz6nf91BE5F1Ao81h3J8KJjEFsX_w7ZMePgHufaDPz6KqGHZBgl1AoQuiz6BlV0lxNg7vaLlJ63JJG3GeVcgkTUcGcE_DssWpJiaAIBJQKcCwLd7ZAigsKkJZp-ZkFzt2tJxD8rbb4urKddpcdYdr7nMMWTvxby7P-IXiCPX-790FiCiIm9h3Lq7eWF1QqL6R-85_QLZKKGgzzG"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="mb-4">
+<span class="text-xs font-bold text-[#5c8a6d] uppercase tracking-wider">Landscaping</span>
+<h3 class="text-xl font-bold text-[#101813] mt-1 group-hover:text-primary transition-colors">Laser Land Leveler</h3>
+</div>
+<ul class="space-y-3 mb-8 flex-grow">
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>High precision laser system</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>Saves up to 30% water usage</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>Automated hydraulic control</span>
+</li>
+</ul>
+<div class="flex items-center gap-3 pt-4 border-t border-[#eaf1ec]">
+<button class="flex-1 bg-primary text-white py-2.5 px-4 rounded-lg text-sm font-bold hover:bg-[#143d24] transition-colors shadow-sm flex items-center justify-center gap-2">
+                                Request Quote
+                            </button>
+<button class="p-2.5 rounded-lg border border-[#eaf1ec] text-[#5c8a6d] hover:bg-primary/5 hover:text-primary hover:border-primary transition-colors" title="View Details">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination / View More -->
+<div class="mt-16 flex justify-center">
+<button class="flex items-center gap-2 px-8 py-3 rounded-full border border-[#eaf1ec] bg-white text-primary font-bold hover:bg-primary hover:text-white transition-all shadow-sm">
+                    View More Equipment
+                    <span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-[#143d24] py-16 px-4 sm:px-10 lg:px-40 relative overflow-hidden">
+<!-- Abstract Pattern Overlay -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<h2 class="text-3xl md:text-4xl font-black text-white mb-6">Need a Custom Configuration?</h2>
+<p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">We understand that every farm has unique requirements. Contact our engineering team for custom-built solutions tailored to your specific crop and soil needs.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-white text-primary px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-lg">
+                        Contact Sales Team
+                    </button>
+<button class="bg-transparent border-2 border-white/30 text-white px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">
+                        Download Catalog (PDF)
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-light pt-16 pb-8 px-4 sm:px-10 lg:px-40 border-t border-[#eaf1ec]">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 text-[#101813] mb-6">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined text-3xl">agriculture</span>
+</div>
+<span class="text-lg font-bold">AgriTech India</span>
+</div>
+<p class="text-sm text-gray-500 mb-6 leading-relaxed">
+                    Leading manufacturer of agricultural implements in India. committed to empowering farmers with durable and efficient machinery since 1995.
+                </p>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-primary" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-gray-400 hover:text-primary" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-gray-400 hover:text-primary" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-[#101813] mb-4">Products</h4>
+<ul class="space-y-2 text-sm text-gray-600">
+<li><a class="hover:text-primary" href="#">Tillage Equipment</a></li>
+<li><a class="hover:text-primary" href="#">Seeding Machines</a></li>
+<li><a class="hover:text-primary" href="#">Harvesting Tools</a></li>
+<li><a class="hover:text-primary" href="#">Land Levelers</a></li>
+<li><a class="hover:text-primary" href="#">Spare Parts</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#101813] mb-4">Company</h4>
+<ul class="space-y-2 text-sm text-gray-600">
+<li><a class="hover:text-primary" href="#">About Us</a></li>
+<li><a class="hover:text-primary" href="#">Our Dealerships</a></li>
+<li><a class="hover:text-primary" href="#">Certifications</a></li>
+<li><a class="hover:text-primary" href="#">Careers</a></li>
+<li><a class="hover:text-primary" href="#">News &amp; Events</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#101813] mb-4">Contact</h4>
+<ul class="space-y-3 text-sm text-gray-600">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5">location_on</span>
+<span>Plot No. 45, Industrial Area, Ludhiana, Punjab - 141003</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">phone</span>
+<span>+91 98765 43210</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">email</span>
+<span>sales@agritechindia.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-8 border-t border-[#eaf1ec] flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+<p>© 2024 AgriTech India Pvt. Ltd. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Sitemap</a>
+</div>
+</div>
+</footer>
+</body></html>

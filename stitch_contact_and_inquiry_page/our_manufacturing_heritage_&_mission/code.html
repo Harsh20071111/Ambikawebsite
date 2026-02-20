@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgriTech India - Our Heritage</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0fbd0f",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Space Grotesk", sans-serif;
+        }
+        /* Custom scrollbar for better aesthetic in dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #112211; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #234823; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0fbd0f; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased selection:bg-primary selection:text-white overflow-x-hidden">
+<!-- Navigation -->
+<div class="relative w-full bg-[#112211] border-b border-[#234823]">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+<header class="flex items-center justify-between h-20">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-4xl">agriculture</span>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">AgriTech India</h2>
+</div>
+<div class="hidden md:flex items-center gap-9">
+<a class="text-white hover:text-primary transition-colors text-sm font-medium" href="#">Products</a>
+<a class="text-primary text-sm font-medium" href="#">About Us</a>
+<a class="text-white hover:text-primary transition-colors text-sm font-medium" href="#">Dealers</a>
+<a class="text-white hover:text-primary transition-colors text-sm font-medium" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-green-600 transition-colors text-white text-sm font-bold tracking-[0.015em]">
+                        Request Quote
+                    </button>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+</div>
+</div>
+<!-- Hero Section -->
+<div class="relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<img alt="Industrial welding in a dark workshop with bright sparks flying" class="w-full h-full object-cover" data-alt="Industrial welding in a dark workshop with bright sparks flying" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWqJ4hj89aEKsft0NbdFRfsVCa6Br0S0OEVe-P8HVn0FC-FLJBdQ4rAJKOeTTlO5GX7sO2GdqK9N4H3-zqVJt_vZ9ekcy5ZRj7LAMNQlnWG1J75Ups5H-ueHvZ8U9ggkisK1D3V9bf2_J_QWRAJ9JLYKDho_pZtAGo1-LJZI1oXxBKgvK3cRiLJNN5ilcyryS0wlDYiAmVOkmSoYp5XoFB4CcyHWr9lDL1uURyr9OmRvfgf-Xij5Zf-c5dP0toTf9AwjjWy_krAwAY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#102210] via-[#102210]/60 to-transparent"></div>
+<div class="absolute inset-0 bg-black/40"></div>
+</div>
+<!-- Hero Content -->
+<div class="relative z-10 text-center max-w-4xl px-4 flex flex-col items-center gap-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
+<span class="material-symbols-outlined text-sm">engineering</span>
+                Est. 2003
+            </div>
+<h1 class="text-white text-5xl md:text-7xl font-black leading-tight tracking-tight">
+                Engineering for the <br class="hidden md:block"/> <span class="text-primary">Indian Farmer</span>
+</h1>
+<p class="text-gray-300 text-lg md:text-xl max-w-2xl font-light">
+                Empowering agriculture with precision machinery. Built to withstand the toughest soils, designed for the hardest workers.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<button class="flex items-center justify-center gap-2 h-12 px-8 bg-primary hover:bg-green-600 rounded-lg text-white font-bold transition-all transform hover:scale-105">
+                    Explore Our Story
+                    <span class="material-symbols-outlined text-sm">arrow_downward</span>
+</button>
+<button class="flex items-center justify-center gap-2 h-12 px-8 bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md rounded-lg text-white font-bold transition-all">
+<span class="material-symbols-outlined text-sm">play_circle</span>
+                    Watch Film
+                </button>
+</div>
+</div>
+</div>
+<!-- Stats Strip -->
+<div class="relative z-20 -mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-[#1a2e1a] border border-[#234823] rounded-xl shadow-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8 backdrop-blur-sm">
+<div class="flex flex-col items-center text-center gap-1">
+<span class="text-4xl md:text-5xl font-bold text-primary">20+</span>
+<span class="text-gray-400 text-sm font-medium uppercase tracking-wide">Years of Excellence</span>
+</div>
+<div class="flex flex-col items-center text-center gap-1">
+<span class="text-4xl md:text-5xl font-bold text-primary">50k+</span>
+<span class="text-gray-400 text-sm font-medium uppercase tracking-wide">Happy Farmers</span>
+</div>
+<div class="flex flex-col items-center text-center gap-1">
+<span class="text-4xl md:text-5xl font-bold text-primary">500+</span>
+<span class="text-gray-400 text-sm font-medium uppercase tracking-wide">Dealers Nationwide</span>
+</div>
+<div class="flex flex-col items-center text-center gap-1">
+<span class="text-4xl md:text-5xl font-bold text-primary">18</span>
+<span class="text-gray-400 text-sm font-medium uppercase tracking-wide">States Covered</span>
+</div>
+</div>
+</div>
+<!-- Introduction Section -->
+<section class="py-24 bg-background-light dark:bg-background-dark">
+<div class="max-w-4xl mx-auto px-4 text-center">
+<h2 class="text-primary text-sm font-bold uppercase tracking-widest mb-3">Our Legacy</h2>
+<h3 class="text-4xl md:text-5xl font-bold text-white mb-8">20+ Years of Craftsmanship</h3>
+<p class="text-gray-400 text-lg leading-relaxed">
+                From humble beginnings in a small workshop to a state-of-the-art manufacturing facility, our journey has been defined by a relentless pursuit of quality. We don't just assemble parts; we forge relationships. We understand that for an Indian farmer, a tractor or a harvester isn't just a machine—it's a livelihood. That's why every bolt we tighten and every weld we spark is done with the weight of that responsibility.
+            </p>
+</div>
+</section>
+<!-- Mission & Vision Cards -->
+<section class="py-12 bg-[#142614]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Mission Card -->
+<div class="group relative bg-[#1a2e1a] p-10 rounded-2xl border border-[#234823] hover:border-primary/50 transition-colors duration-300">
+<div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl text-primary">flag</span>
+</div>
+<div class="size-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-2xl">target</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-4">Our Mission</h3>
+<p class="text-gray-400 leading-relaxed">
+                        To mechanize every farm in India with affordable, world-class technology. We aim to reduce manual labor and increase crop yields through precision engineering tailored specifically for the diverse soil conditions of the Indian subcontinent.
+                    </p>
+</div>
+<!-- Vision Card -->
+<div class="group relative bg-[#1a2e1a] p-10 rounded-2xl border border-[#234823] hover:border-primary/50 transition-colors duration-300">
+<div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl text-primary">visibility</span>
+</div>
+<div class="size-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-2xl">lightbulb</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-4">Our Vision</h3>
+<p class="text-gray-400 leading-relaxed">
+                        To be the global benchmark for agricultural manufacturing quality. We envision a future where Indian agricultural technology leads the world in durability, efficiency, and sustainable farming practices.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Timeline Section -->
+<section class="py-24 bg-background-light dark:bg-background-dark relative overflow-hidden">
+<!-- Connecting Line (Mobile: vertical, Desktop: horizontalish) -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-white">Milestones of Progress</h2>
+</div>
+<div class="relative">
+<!-- Vertical Line for Mobile -->
+<div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-[#234823] md:-ml-0.5"></div>
+<div class="flex flex-col gap-12">
+<!-- Item 1 -->
+<div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+<div class="md:w-5/12 order-2 md:order-1 md:text-right pl-12 md:pl-0 md:pr-12">
+<h3 class="text-primary text-3xl font-bold mb-2">2003</h3>
+<h4 class="text-white text-xl font-semibold mb-2">The Seed is Sown</h4>
+<p class="text-gray-400">Founded in a small 500 sq. ft. garage in Punjab with a single lathe machine and a dream to build better plows.</p>
+</div>
+<div class="absolute left-4 md:left-1/2 -ml-[9px] w-[18px] h-[18px] rounded-full border-4 border-[#102210] bg-primary z-10 order-1 md:order-2"></div>
+<div class="md:w-5/12 order-3 md:order-3"></div>
+</div>
+<!-- Item 2 -->
+<div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+<div class="md:w-5/12 order-2 md:order-1"></div>
+<div class="absolute left-4 md:left-1/2 -ml-[9px] w-[18px] h-[18px] rounded-full border-4 border-[#102210] bg-primary z-10 order-1 md:order-2"></div>
+<div class="md:w-5/12 order-3 md:order-3 pl-12 md:pl-12">
+<h3 class="text-primary text-3xl font-bold mb-2">2010</h3>
+<h4 class="text-white text-xl font-semibold mb-2">First Factory Opened</h4>
+<p class="text-gray-400">Inaugurated our first fully automated manufacturing plant, increasing production capacity to 1,000 units per month.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+<div class="md:w-5/12 order-2 md:order-1 md:text-right pl-12 md:pl-0 md:pr-12">
+<h3 class="text-primary text-3xl font-bold mb-2">2018</h3>
+<h4 class="text-white text-xl font-semibold mb-2">Going Global</h4>
+<p class="text-gray-400">Launched our export division. AgriTech India machines started tilling soils in Africa and Southeast Asia.</p>
+</div>
+<div class="absolute left-4 md:left-1/2 -ml-[9px] w-[18px] h-[18px] rounded-full border-4 border-[#102210] bg-primary z-10 order-1 md:order-2"></div>
+<div class="md:w-5/12 order-3 md:order-3"></div>
+</div>
+<!-- Item 4 -->
+<div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+<div class="md:w-5/12 order-2 md:order-1"></div>
+<div class="absolute left-4 md:left-1/2 -ml-[9px] w-[18px] h-[18px] rounded-full border-4 border-[#102210] bg-primary z-10 order-1 md:order-2"></div>
+<div class="md:w-5/12 order-3 md:order-3 pl-12 md:pl-12">
+<h3 class="text-primary text-3xl font-bold mb-2">2024</h3>
+<h4 class="text-white text-xl font-semibold mb-2">Smart Farming Initiative</h4>
+<p class="text-gray-400">Introduced IoT-enabled tractors and precision seeders, bringing the future of farming to the present day.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Photo Grid: From Factory to Farm -->
+<section class="py-20 bg-[#142614]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<h2 class="text-primary text-sm font-bold uppercase tracking-widest mb-2">Our Journey</h2>
+<h3 class="text-4xl font-bold text-white">From Our Factory to Your Farm</h3>
+</div>
+<p class="text-gray-400 max-w-md text-sm md:text-base">
+                    Witness the journey of our machines, from raw steel in our foundry to the fertile fields of the Indian heartland.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[300px]">
+<!-- Large Item -->
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl">
+<img alt="Bright green tractor working in a vast Indian wheat field during sunset" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Bright green tractor working in a vast Indian wheat field during sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuP_VyXckwoqrFer1a8M3gNcUXWKNR8FqyUDrWunluMeaNzuGSkgWPE42u3GUcnLthMAP8jfqu3Nzri35IvnCJDdxqpypdEl96tf5R4OLCSWxLoM5cZ1pmfWemAGXTeSW2yQE7t3qbcqIi8_FFbjpsmTVzDmd2LxC1at0spc68J22D0QPJCRjTeRoa8K4MsgCPbqrFlZ_UkWaYsHZ0VbSm9xmwUI-oODs4ziZwBbIKP2Gz8ocDYbtHv9ylbiWZsfF_ksSN0ex5fTVf"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="inline-block px-2 py-1 bg-primary text-white text-xs font-bold rounded mb-2">In Action</span>
+<h4 class="text-white text-2xl font-bold">Punjab Wheat Harvest</h4>
+<p class="text-gray-300 text-sm mt-1">Our Harvester X-2000 in peak season operation.</p>
+</div>
+</div>
+<!-- Regular Item -->
+<div class="relative group overflow-hidden rounded-xl">
+<img alt="Factory worker inspecting metal gears on an assembly line" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Factory worker inspecting metal gears on an assembly line" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDkzyAMBAq5BKcgcO3eLZf8mhpFsbZCN9e_o6Cx_IEvD-n4p39g0m_R9JJBQ_VvifdfzIYXt-YLRNY0nF7Qj6G-Dwtg8PChSiygA8Yv1MCMxoYX6FKMOVA-ggj3kih9OY6JiP-cdlJA8QbVd8k8MKfyfakVMd_5XzStN8yPH0YvGuDKtBbHPaQ07Y3k3IEEA8TYoPkM2ipJKF5RTX8N-fNXNg0e0GnYqaoSht96B-ueKanynUlmmuGLLKwPBtnkiaJZdwYBy4pf6yA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h4 class="text-white text-lg font-bold">Quality Control</h4>
+</div>
+</div>
+<!-- Regular Item -->
+<div class="relative group overflow-hidden rounded-xl">
+<img alt="Fleet of new tractors lined up for delivery on trucks" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Fleet of new tractors lined up for delivery on trucks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGmFHHpfR7g5YzaOzIfqx7R2Kr9qcsJ1HS4beltDi469g0FjsNk4yGN9x9MGIhf8nD0G-NUyJSEvDkqHCYVN8U6c3JG9pZfdHZO2ueQZYOL4W73wf9C7Fs5BsyuAjNVS5FyXOmzmqgKQqpYj3YiaiTmzUGMiX_P86ZtHLRK9AX7FdZr1sjBy3ZMyFia-v5Asc6YKE-K-VVDXf4fDDAp_7IqPe15xLd7qH2KFTHenOk0Unk6521UYi3RE9DSfkgXvlmBjuHvmlNS8yn"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h4 class="text-white text-lg font-bold">Ready for Delivery</h4>
+</div>
+</div>
+<!-- Wide Item -->
+<div class="md:col-span-1 relative group overflow-hidden rounded-xl">
+<img alt="Close up of Indian farmer's hands holding soil with a tractor in background" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of Indian farmer's hands holding soil with a tractor in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjm8gdBWbNtQMAUwADvw44FbRVAS78kk5TWOGg5ffn6VNhA_1nlQy_I0Lj5En2DMXuLUZODiCE8Ce49JjvRTBvkbuTEUWAAEH9ZHMZcwORLzxXXOs4Pxr2XiYP-U9eZNQMj2onYsVpRvoKwZJdrxixZsa4Ei1dARYrAkUVHgDc_Z5U1LM0WfETpwIah2RGkxJ75v9csmS2pvb2PNPripIRbHm2K4Addc6A9qubVG3IICe7nn9soAJhOpVBwhuo7Zmd6qsHmsrexBeN"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h4 class="text-white text-lg font-bold">Farmer First</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer CTA -->
+<section class="relative py-20 bg-background-light dark:bg-background-dark border-t border-[#234823]">
+<div class="max-w-4xl mx-auto px-4 text-center">
+<span class="material-symbols-outlined text-6xl text-primary mb-6">handshake</span>
+<h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Ready to Upgrade Your Farm?</h2>
+<p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
+                Join the family of 50,000+ satisfied farmers. Explore our latest catalog or find a dealer near you today.
+            </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="flex items-center justify-center h-14 px-8 bg-primary hover:bg-green-600 rounded-lg text-white text-lg font-bold transition-colors shadow-lg shadow-primary/20">
+                    View Product Catalog
+                </button>
+<button class="flex items-center justify-center h-14 px-8 bg-[#1a2e1a] hover:bg-[#234823] border border-[#234823] rounded-lg text-white text-lg font-bold transition-colors">
+                    Find Nearest Dealer
+                </button>
+</div>
+</div>
+</section>
+<!-- Simple Footer -->
+<footer class="bg-[#0b160b] py-8 border-t border-[#1a2e1a]">
+<div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined">agriculture</span>
+</div>
+<span class="text-white font-bold text-lg">AgriTech India</span>
+</div>
+<div class="text-gray-500 text-sm">
+                © 2024 AgriTech India Pvt. Ltd. All rights reserved.
+            </div>
+<div class="flex gap-6">
+<a class="text-gray-400 hover:text-white transition-colors" href="#">Privacy</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#">Terms</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#">Sitemap</a>
+</div>
+</div>
+</footer>
+</body></html>
