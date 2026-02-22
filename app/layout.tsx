@@ -17,7 +17,8 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: "AMBIKA ENGINEERING | Modern Agricultural Equipment",
-  description: "Premium agricultural machinery for complete farm mechanization.",
+  description:
+    "Premium agricultural machinery for complete farm mechanization.",
 };
 
 export default function RootLayout({

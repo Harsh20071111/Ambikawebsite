@@ -76,8 +76,8 @@
   --chart-1: #1a4d2e;
   --chart-2: #24633d;
   --chart-3: #f4c025;
-  --chart-4: #2D5A3D;
-  --chart-5: #8B9A6B;
+  --chart-4: #2d5a3d;
+  --chart-5: #8b9a6b;
   --sidebar: #1a4d2e;
   --sidebar-foreground: #ffffff;
   --sidebar-primary: #24633d;
@@ -110,8 +110,8 @@
   --chart-1: #14b830;
   --chart-2: #24633d;
   --chart-3: #f4c025;
-  --chart-4: #2D5A3D;
-  --chart-5: #8B9A6B;
+  --chart-4: #2d5a3d;
+  --chart-5: #8b9a6b;
   --sidebar: #111916;
   --sidebar-foreground: #e8ebe9;
   --sidebar-primary: #14b830;
@@ -180,4 +180,30 @@ html {
 ::selection {
   background: rgba(26, 77, 46, 0.15);
   color: #1a4d2e;
+}
+
+/* 3D and Shimmer Effects for Product Slider */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.translate-z-50 {
+  transform: translateZ(50px);
 }

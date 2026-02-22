@@ -18,6 +18,7 @@ model Product {
   category    String
   status      String   @default("Active") // Active, Out of Stock, Discontinued
   imageUrl    String?
+  images      String[] @default([]) // Support for multiple POV images
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }

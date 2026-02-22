@@ -1,20 +1,37 @@
+import dynamic from "next/dynamic";
 import { ProductSlider } from "@/components/home/ProductSlider";
 import { QuickProductStrip } from "@/components/home/QuickProductStrip";
-import { WhyChooseUs } from "@/components/home/WhyChooseUs";
-import { Testimonials } from "@/components/home/Testimonials";
-import { DealerCTA } from "@/components/home/DealerCTA";
-import { CallbackRequest } from "@/components/home/CallbackRequest";
-import { Stats } from "@/components/home/Stats";
-import { FloatingWhatsApp } from "@/components/home/FloatingWhatsApp";
+import { getProducts } from "@/lib/actions/products";
 
-export default function Home() {
+const Stats = dynamic(() => import("@/components/home/Stats").then(mod => mod.Stats));
+const WhyChooseUs = dynamic(() => import("@/components/home/WhyChooseUs").then(mod => mod.WhyChooseUs));
+const Testimonials = dynamic(() => import("@/components/home/Testimonials").then(mod => mod.Testimonials));
+const DealerCTA = dynamic(() => import("@/components/home/DealerCTA").then(mod => mod.DealerCTA));
+const CallbackRequest = dynamic(() => import("@/components/home/CallbackRequest").then(mod => mod.CallbackRequest));
+const FloatingWhatsApp = dynamic(() => import("@/components/home/FloatingWhatsApp").then(mod => mod.FloatingWhatsApp));
+
+export default async function Home() {
+  const products = await getProducts();
+
+  // Serialize complex objects for the client component
+  const serializedProducts = products.map((p) => ({
+    id: p.id,
+    name: p.name,
+    description: p.description,
+    price: Number(p.price),
+    category: p.category,
+    status: p.status,
+    imageUrl: p.imageUrl,
+    images: p.images || [],
+  }));
+
   return (
     <div className="flex flex-col">
       {/* Hero Product Slider */}
-      <ProductSlider />
+      <ProductSlider products={serializedProducts} />
 
       {/* Quick Product Strip */}
-      <QuickProductStrip />
+      <QuickProductStrip products={serializedProducts} />
 
       {/* Stats Band */}
       <Stats />
