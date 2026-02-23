@@ -4,13 +4,24 @@ import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
 
 export async function getProducts() {
-  return await prisma.product.findMany({
+  const products = await prisma.product.findMany({
     orderBy: { createdAt: "desc" },
   });
+  // Serialize Decimal to number to cross "use server" boundary safely
+  return products.map(p => ({
+    ...p,
+    price: Number(p.price),
+  }));
 }
 
 export async function getProductById(id: string) {
-  return await prisma.product.findUnique({ where: { id } });
+  const product = await prisma.product.findUnique({ where: { id } });
+  if (!product) return null;
+
+  return {
+    ...product,
+    price: Number(product.price),
+  };
 }
 
 export async function createProduct(data: {
@@ -36,7 +47,13 @@ export async function createProduct(data: {
     });
     revalidatePath("/admin/products");
     revalidatePath("/products");
-    return { success: true, data: product };
+    return {
+      success: true,
+      data: {
+        ...product,
+        price: Number(product.price)
+      }
+    };
   } catch (error) {
     console.error("Failed to create product:", error);
     return { success: false, error: "Failed to create product" };
@@ -62,7 +79,13 @@ export async function updateProduct(
     });
     revalidatePath("/admin/products");
     revalidatePath("/products");
-    return { success: true, data: product };
+    return {
+      success: true,
+      data: {
+        ...product,
+        price: Number(product.price)
+      }
+    };
   } catch (error) {
     console.error("Failed to update product:", error);
     return { success: false, error: "Failed to update product" };
