@@ -167,7 +167,7 @@ export default function ContactPage() {
                           <Input
                             id="phone"
                             type="tel"
-                            placeholder="+91 95742 45964"
+                            placeholder="+91 XXXXX XXXXX"
                             required
                             className="h-12 bg-muted/30"
                           />

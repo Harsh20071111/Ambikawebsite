@@ -143,7 +143,7 @@ export function CallbackRequest() {
                       <Input
                         id="phone"
                         type="tel"
-                        placeholder="+91 95742 45964"
+                        placeholder="+91 XXXXX XXXXX"
                         required
                         className="h-12 bg-white border-[#e8e2ce] focus:border-[#1a4d2e] focus:ring-[#1a4d2e]"
                       />
