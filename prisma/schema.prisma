@@ -20,6 +20,8 @@ model Product {
   status      String   @default("Active") // Active, Out of Stock, Discontinued
   imageUrl    String?
   images      String[] @default([]) // Support for multiple POV images
+  buildType   String?  // Hydraulic, Mechanical, Heavy Duty
+  capacity    String?  // Under 5 Tons, 5-10 Tons, 10+ Tons
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }

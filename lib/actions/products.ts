@@ -32,6 +32,8 @@ export async function createProduct(data: {
   status?: string;
   imageUrl?: string;
   images?: string[];
+  buildType?: string;
+  capacity?: string;
 }) {
   try {
     const product = await prisma.product.create({
@@ -43,6 +45,8 @@ export async function createProduct(data: {
         status: data.status || "Active",
         imageUrl: data.imageUrl || null,
         images: data.images || [],
+        buildType: data.buildType || null,
+        capacity: data.capacity || null,
       },
     });
     revalidatePath("/admin/products");
@@ -70,6 +74,8 @@ export async function updateProduct(
     status?: string;
     imageUrl?: string;
     images?: string[];
+    buildType?: string;
+    capacity?: string;
   },
 ) {
   try {

@@ -29,6 +29,9 @@ const categories = [
   "Other",
 ];
 
+const buildTypes = ["Hydraulic", "Mechanical", "Heavy Duty"];
+const capacityRanges = ["Under 5 Tons", "5-10 Tons", "10+ Tons"];
+
 export default function AddProductPage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -46,6 +49,8 @@ export default function AddProductPage() {
     status: "Active",
     imageUrl: "",
     images: [] as string[],
+    buildType: "",
+    capacity: "",
   });
 
   const handleFileUpload = useCallback(async (files: FileList | File[]) => {
@@ -195,6 +200,8 @@ export default function AddProductPage() {
         status: form.status,
         imageUrl: form.imageUrl || undefined,
         images: form.images,
+        buildType: form.buildType || undefined,
+        capacity: form.capacity || undefined,
       });
 
       if (result.success) {
@@ -298,6 +305,46 @@ export default function AddProductPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div className="space-y-2">
+                <Label htmlFor="buildType">Build Type</Label>
+                <Select
+                  value={form.buildType}
+                  onValueChange={(v) => setForm({ ...form, buildType: v })}
+                >
+                  <SelectTrigger className="h-12 bg-muted/30">
+                    <SelectValue placeholder="Select build type" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {buildTypes.map((bt) => (
+                      <SelectItem key={bt} value={bt}>
+                        {bt}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="capacity">Capacity</Label>
+                <Select
+                  value={form.capacity}
+                  onValueChange={(v) => setForm({ ...form, capacity: v })}
+                >
+                  <SelectTrigger className="h-12 bg-muted/30">
+                    <SelectValue placeholder="Select capacity" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {capacityRanges.map((cr) => (
+                      <SelectItem key={cr} value={cr}>
+                        {cr}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {/* Image Upload */}
               <div className="space-y-4 md:col-span-2">
                 <Label>Product Images</Label>
@@ -377,8 +424,8 @@ export default function AddProductPage() {
                     onDragLeave={handleDragLeave}
                     onClick={() => fileInputRef.current?.click()}
                     className={`relative w-full aspect-[21/9] rounded-xl border-2 border-dashed cursor-pointer transition-all duration-200 flex flex-col items-center justify-center gap-3 ${dragActive
-                        ? "border-primary bg-primary/5 scale-[1.01]"
-                        : "border-border hover:border-primary/50 hover:bg-muted/30"
+                      ? "border-primary bg-primary/5 scale-[1.01]"
+                      : "border-border hover:border-primary/50 hover:bg-muted/30"
                       }`}
                   >
                     <div

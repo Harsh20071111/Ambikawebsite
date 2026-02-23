@@ -29,17 +29,20 @@ const categories = [
 const buildTypes = ["Hydraulic", "Mechanical", "Heavy Duty"];
 const capacityRanges = ["Under 5 Tons", "5-10 Tons", "10+ Tons"];
 
-// Helper function to guess build type/capacity if data is missing
-// In a real app, these would be fields in the DB
+// Use real DB fields if available, fallback to guessing for backward compat
 // biome-ignore lint/suspicious/noExplicitAny: Expected dynamic data
 const getProductTags = (product: any) => {
-  let buildType = "Mechanical";
-  if (product.name.toLowerCase().includes("hydraulic")) buildType = "Hydraulic";
-  if (product.name.toLowerCase().includes("heavy")) buildType = "Heavy Duty";
+  let buildType = product.buildType || "Mechanical";
+  if (!product.buildType) {
+    if (product.name.toLowerCase().includes("hydraulic")) buildType = "Hydraulic";
+    if (product.name.toLowerCase().includes("heavy")) buildType = "Heavy Duty";
+  }
 
-  let capacity = "Under 5 Tons";
-  if (product.price > 200000) capacity = "5-10 Tons";
-  if (product.price > 400000) capacity = "10+ Tons";
+  let capacity = product.capacity || "Under 5 Tons";
+  if (!product.capacity) {
+    if (product.price > 200000) capacity = "5-10 Tons";
+    if (product.price > 400000) capacity = "10+ Tons";
+  }
 
   return { buildType, capacity };
 };
@@ -86,11 +89,10 @@ function CheckboxGroup({
             className="flex items-center gap-3 cursor-pointer group hover:bg-transparent"
           >
             <div
-              className={`w-4.5 h-4.5 rounded border-2 flex items-center justify-center transition-all ${
-                selected.includes(opt)
+              className={`w-4.5 h-4.5 rounded border-2 flex items-center justify-center transition-all ${selected.includes(opt)
                   ? "bg-primary border-primary"
                   : "border-border group-hover:border-primary/50"
-              }`}
+                }`}
             >
               {selected.includes(opt) && (
                 <svg
@@ -420,18 +422,17 @@ export function ProductCatalog({
                         {/* Derive badge from tags or status */}
                         {(product.buildType === "Heavy Duty" ||
                           product.status === "Active") && (
-                          <Badge
-                            className={`absolute top-3 left-3 font-semibold ${
-                              product.buildType === "Heavy Duty"
-                                ? "bg-[#D4A843] text-white"
-                                : "bg-primary text-white"
-                            }`}
-                          >
-                            {product.buildType === "Heavy Duty"
-                              ? "Heavy Duty"
-                              : "Best Seller"}
-                          </Badge>
-                        )}
+                            <Badge
+                              className={`absolute top-3 left-3 font-semibold ${product.buildType === "Heavy Duty"
+                                  ? "bg-[#D4A843] text-white"
+                                  : "bg-primary text-white"
+                                }`}
+                            >
+                              {product.buildType === "Heavy Duty"
+                                ? "Heavy Duty"
+                                : "Best Seller"}
+                            </Badge>
+                          )}
                       </div>
                       <CardContent className="p-5 space-y-2 flex flex-col flex-1">
                         <p className="text-xs font-semibold text-primary uppercase tracking-wider">
