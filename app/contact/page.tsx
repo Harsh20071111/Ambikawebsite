@@ -331,18 +331,31 @@ export default function ContactPage() {
 
               {/* Google Map */}
               <Card className="border border-border overflow-hidden">
-                <div className="h-64 w-full">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.961346568008!2d72.9555603!3d23.3534149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395ddb89065544d5%3A0x8a0e01536798064a!2sAmbika%20engineering%20co.!5e0!3m2!1sen!2sin!4v1771862880272!5m2!1sen!2sin"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Ambika Engineering Location"
-                  />
-                </div>
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=Ambika+engineering+co.&destination_place_id=ChIJ1UVVBondXDkRSgaYZxMBDoo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block relative group"
+                >
+                  <div className="h-64 w-full pointer-events-none">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.961346568008!2d72.9555603!3d23.3534149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395ddb89065544d5%3A0x8a0e01536798064a!2sAmbika%20engineering%20co.!5e0!3m2!1sen!2sin!4v1771862880272!5m2!1sen!2sin"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Ambika Engineering Location"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center cursor-pointer">
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-primary text-white px-5 py-2.5 rounded-lg font-semibold text-sm shadow-lg flex items-center gap-2">
+                      <MapPin className="w-4 h-4" />
+                      Get Directions
+                    </span>
+                  </div>
+                </a>
               </Card>
 
               {/* Become a Dealer */}
