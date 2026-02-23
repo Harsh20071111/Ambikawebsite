@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { Calendar, MessageSquare, Package, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import { getEnquiries } from "@/lib/actions/enquiries";
@@ -103,13 +105,12 @@ export default async function AdminDashboard() {
                 </div>
                 <div className="flex items-center gap-3">
                   <span
-                    className={`text-xs font-medium px-2.5 py-1 rounded-full ${
-                      enquiry.status === "New"
+                    className={`text-xs font-medium px-2.5 py-1 rounded-full ${enquiry.status === "New"
                         ? "bg-green-100 text-green-700"
                         : enquiry.status === "Read"
                           ? "bg-blue-100 text-blue-700"
                           : "bg-gray-100 text-gray-700"
-                    }`}
+                      }`}
                   >
                     {enquiry.status}
                   </span>

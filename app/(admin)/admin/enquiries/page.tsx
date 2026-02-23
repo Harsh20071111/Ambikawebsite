@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { getEnquiries } from "@/lib/actions/enquiries";
 import { EnquiriesTable } from "./EnquiriesTable";
 
