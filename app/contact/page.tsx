@@ -333,7 +333,7 @@ export default function ContactPage() {
               <Card className="border border-border overflow-hidden">
                 <div className="h-64 w-full">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.5!2d73.1!3d23.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c514e7adaf0cb%3A0xe6fb4acb7baa3c98!2sAmbika%20Engineering!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.961346568008!2d72.9555603!3d23.3534149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395ddb89065544d5%3A0x8a0e01536798064a!2sAmbika%20engineering%20co.!5e0!3m2!1sen!2sin!4v1771862880272!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
