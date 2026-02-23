@@ -42,17 +42,10 @@ export function ProductGallery({
   return (
     <div className="space-y-4">
       {/* Main Image View */}
-      <div
-        className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-muted/30 border border-border flex items-center justify-center group cursor-zoom-in"
+      <button
+        type="button"
+        className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-muted/30 border border-border flex items-center justify-center group cursor-zoom-in"
         onClick={() => setIsLightboxOpen(true)}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            setIsLightboxOpen(true);
-          }
-        }}
-        role="button"
-        tabIndex={0}
         aria-label="View image fullscreen"
       >
         <AnimatePresence mode="wait">
@@ -97,7 +90,7 @@ export function ProductGallery({
             {category}
           </Badge>
         </div>
-      </div>
+      </button>
 
       {/* Thumbnails (Only show if multiple images exist) */}
       {images.length > 1 && (
@@ -107,10 +100,11 @@ export function ProductGallery({
               key={src}
               type="button"
               onClick={() => setCurrentIndex(index)}
-              className={`relative flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden border-2 transition-all duration-200 snap-center ${currentIndex === index
-                ? "border-primary shadow-md ring-2 ring-primary/20 scale-[1.02]"
-                : "border-transparent bg-muted/50 hover:bg-muted opacity-60 hover:opacity-100"
-                }`}
+              className={`relative flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden border-2 transition-all duration-200 snap-center ${
+                currentIndex === index
+                  ? "border-primary shadow-md ring-2 ring-primary/20 scale-[1.02]"
+                  : "border-transparent bg-muted/50 hover:bg-muted opacity-60 hover:opacity-100"
+              }`}
               aria-label={`View image ${index + 1}`}
             >
               <Image

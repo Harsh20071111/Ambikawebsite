@@ -8,7 +8,7 @@ export async function getProducts() {
     orderBy: { createdAt: "desc" },
   });
   // Serialize Decimal to number to cross "use server" boundary safely
-  return products.map(p => ({
+  return products.map((p) => ({
     ...p,
     price: Number(p.price),
   }));
@@ -51,8 +51,8 @@ export async function createProduct(data: {
       success: true,
       data: {
         ...product,
-        price: Number(product.price)
-      }
+        price: Number(product.price),
+      },
     };
   } catch (error) {
     console.error("Failed to create product:", error);
@@ -83,8 +83,8 @@ export async function updateProduct(
       success: true,
       data: {
         ...product,
-        price: Number(product.price)
-      }
+        price: Number(product.price),
+      },
     };
   } catch (error) {
     console.error("Failed to update product:", error);
