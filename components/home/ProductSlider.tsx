@@ -185,7 +185,7 @@ export function ProductSlider({
             className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center w-full"
           >
             {/* Left Content */}
-            <div className="flex flex-col gap-6 lg:gap-8 text-left lg:col-span-4 z-20 order-2 lg:order-1">
+            <div className="flex flex-col gap-6 lg:gap-8 text-left lg:col-span-4 z-20">
               {/* Badges */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -270,7 +270,7 @@ export function ProductSlider({
             </div>
 
             {/* Right Content - Product Image */}
-            <div className="relative flex justify-center items-center lg:col-span-8 h-[350px] sm:h-[450px] md:h-[600px] lg:h-[800px] group mt-6 sm:mt-10 lg:mt-0 perspective-1000 z-10 w-full ml-auto order-1 lg:order-2">
+            <div className="relative flex justify-center items-center lg:col-span-8 h-[350px] sm:h-[450px] md:h-[600px] lg:h-[800px] group mt-6 sm:mt-10 lg:mt-0 perspective-1000 z-10 w-full ml-auto">
               {/* Dramatic Glow behind the image - Animated for Mobile */}
               <div className="absolute inset-x-0 bottom-0 top-1/4 bg-[#14b830]/25 blur-[60px] sm:blur-[100px] lg:blur-[140px] rounded-full opacity-70 animate-[pulse_4s_ease-in-out_infinite] lg:animate-none scale-100 lg:scale-90 group-hover:scale-100 group-hover:bg-[#14b830]/35 transition-all duration-1000 rotate-180" />
               <div className="absolute inset-y-0 right-0 left-1/4 bg-[#0ea5e9]/15 blur-[50px] sm:blur-[80px] lg:blur-[120px] rounded-full opacity-60 animate-[pulse_5s_ease-in-out_infinite] lg:animate-none scale-95 lg:scale-90 transition-all duration-1000" />
@@ -354,8 +354,8 @@ export function ProductSlider({
               >
                 <div
                   className={`h-1.5 rounded-full transition-all duration-500 ease-out ${i === currentIndex
-                      ? "w-10 bg-[#4ade80] shadow-[0_0_12px_rgba(74,222,128,0.8)]"
-                      : "w-2 bg-white/30 group-hover/dot:bg-white/60 group-hover/dot:w-4"
+                    ? "w-10 bg-[#4ade80] shadow-[0_0_12px_rgba(74,222,128,0.8)]"
+                    : "w-2 bg-white/30 group-hover/dot:bg-white/60 group-hover/dot:w-4"
                     }`}
                 />
               </button>
