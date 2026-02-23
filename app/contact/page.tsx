@@ -51,7 +51,7 @@ const contactInfo = [
     title: "Factory Address",
     detail: "Ambika Engineering, Opp GEB, Modasa Road",
     sub: "Talod, Sabarkantha, Gujarat 383215",
-    href: "https://maps.google.com",
+    href: "https://maps.app.goo.gl/8pnVH51XiBhkdoA7A",
   },
 ];
 
@@ -329,15 +329,19 @@ export default function ContactPage() {
                 </a>
               ))}
 
-              {/* Map Placeholder */}
+              {/* Google Map */}
               <Card className="border border-border overflow-hidden">
-                <div className="h-48 bg-muted flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-8 h-8 text-muted-foreground mx-auto mb-2" />
-                    <p className="text-sm text-muted-foreground font-medium">
-                      View on Google Maps
-                    </p>
-                  </div>
+                <div className="h-64 w-full">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.5!2d73.1!3d23.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c514e7adaf0cb%3A0xe6fb4acb7baa3c98!2sAmbika%20Engineering!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Ambika Engineering Location"
+                  />
                 </div>
               </Card>
 
