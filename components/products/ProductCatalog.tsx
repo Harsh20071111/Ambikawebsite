@@ -90,8 +90,8 @@ function CheckboxGroup({
           >
             <div
               className={`w-4.5 h-4.5 rounded border-2 flex items-center justify-center transition-all ${selected.includes(opt)
-                  ? "bg-primary border-primary"
-                  : "border-border group-hover:border-primary/50"
+                ? "bg-primary border-primary"
+                : "border-border group-hover:border-primary/50"
                 }`}
             >
               {selected.includes(opt) && (
@@ -399,12 +399,31 @@ export function ProductCatalog({
               <motion.div
                 variants={containerVariants}
                 initial="hidden"
-                animate="visible"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-60px" }}
                 key={`${searchQuery}-${selectedCategories.join()}-${selectedBuildTypes.join()}-${selectedCapacities.join()}`}
                 className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6"
               >
-                {filteredProducts.map((product) => (
-                  <motion.div key={product.id} variants={itemVariants}>
+                {filteredProducts.map((product, idx) => (
+                  <motion.div
+                    key={product.id}
+                    initial={{
+                      opacity: 0,
+                      x: idx % 2 === 0 ? -25 : 25,
+                      y: 15,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0,
+                      y: 0,
+                    }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{
+                      duration: 0.5,
+                      delay: (idx % 3) * 0.1,
+                      ease: [0.25, 0.46, 0.45, 0.94],
+                    }}
+                  >
                     <Card className="group overflow-hidden border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-500 bg-white h-full flex flex-col">
                       <div className="relative h-56 overflow-hidden bg-muted flex-shrink-0">
                         {product.imageUrl ? (
@@ -424,8 +443,8 @@ export function ProductCatalog({
                           product.status === "Active") && (
                             <Badge
                               className={`absolute top-3 left-3 font-semibold ${product.buildType === "Heavy Duty"
-                                  ? "bg-[#D4A843] text-white"
-                                  : "bg-primary text-white"
+                                ? "bg-[#D4A843] text-white"
+                                : "bg-primary text-white"
                                 }`}
                             >
                               {product.buildType === "Heavy Duty"

@@ -153,10 +153,23 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
                                 <motion.div
                                     key={`${item.src}-${idx}`}
                                     layout
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    animate={{ opacity: 1, scale: 1 }}
+                                    initial={{
+                                        opacity: 0,
+                                        x: idx % 2 === 0 ? -30 : 30,
+                                        scale: 0.95,
+                                    }}
+                                    whileInView={{
+                                        opacity: 1,
+                                        x: 0,
+                                        scale: 1,
+                                    }}
                                     exit={{ opacity: 0, scale: 0.9 }}
-                                    transition={{ duration: 0.4 }}
+                                    viewport={{ once: true, margin: "-60px" }}
+                                    transition={{
+                                        duration: 0.5,
+                                        delay: (idx % 4) * 0.08,
+                                        ease: [0.25, 0.46, 0.45, 0.94],
+                                    }}
                                     className={`relative rounded-xl overflow-hidden group cursor-pointer ${spanPatterns[idx % spanPatterns.length]}`}
                                     onClick={() => setLightboxIdx(idx)}
                                 >
