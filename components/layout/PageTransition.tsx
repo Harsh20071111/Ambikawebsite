@@ -1,32 +1,9 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
-
-const variants = {
-    hidden: {
-        opacity: 0,
-        y: 12,
-    },
-    enter: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 0.35,
-            ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
-        },
-    },
-    exit: {
-        opacity: 0,
-        y: -8,
-        transition: {
-            duration: 0.2,
-            ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
-        },
-    },
-};
 
 export function PageTransition({ children }: { children: ReactNode }) {
     const pathname = usePathname();
@@ -55,17 +32,14 @@ export function PageTransition({ children }: { children: ReactNode }) {
                 </div>
             )}
 
-            <AnimatePresence mode="wait" initial={false}>
-                <motion.main
-                    key={pathname}
-                    variants={variants}
-                    initial="hidden"
-                    animate="enter"
-                    exit="exit"
-                >
-                    {children}
-                </motion.main>
-            </AnimatePresence>
+            <motion.main
+                key={pathname}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
+            >
+                {children}
+            </motion.main>
         </>
     );
 }
