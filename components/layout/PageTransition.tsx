@@ -7,26 +7,33 @@ import { useEffect, useRef, useState } from "react";
 
 export function PageTransition({ children }: { children: ReactNode }) {
     const pathname = usePathname();
-    const [showProgress, setShowProgress] = useState(false);
+    const [isTransitioning, setIsTransitioning] = useState(false);
     const prevPathname = useRef(pathname);
 
-    // Show progress bar + scroll to top on route change
     useEffect(() => {
         if (prevPathname.current !== pathname) {
             prevPathname.current = pathname;
-            setShowProgress(true);
+            setIsTransitioning(true);
             window.scrollTo({ top: 0, behavior: "instant" });
 
-            // Hide progress bar after animation completes
-            const timer = setTimeout(() => setShowProgress(false), 900);
+            const timer = setTimeout(() => setIsTransitioning(false), 600);
             return () => clearTimeout(timer);
         }
     }, [pathname]);
 
     return (
         <>
-            {/* Route change progress bar */}
-            {showProgress && (
+            {/* Route transition overlay */}
+            {isTransitioning && (
+                <div className="route-overlay" aria-hidden="true">
+                    <div className="route-overlay__spinner">
+                        <div className="route-overlay__ring" />
+                    </div>
+                </div>
+            )}
+
+            {/* Top progress bar */}
+            {isTransitioning && (
                 <div className="route-progress" aria-hidden="true">
                     <div className="route-progress__bar" />
                 </div>

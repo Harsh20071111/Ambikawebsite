@@ -218,7 +218,7 @@ html {
   left: 0;
   right: 0;
   height: 3px;
-  z-index: 9999;
+  z-index: 10000;
   pointer-events: none;
 }
 
@@ -241,6 +241,56 @@ html {
 
   100% {
     width: 100%;
+  }
+}
+
+/* ============================================
+   ROUTE OVERLAY — Frosted loading overlay
+   ============================================ */
+.route-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.35);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  animation: overlayFadeIn 0.15s ease-out forwards;
+  pointer-events: none;
+}
+
+.route-overlay__spinner {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.route-overlay__ring {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3px solid rgba(20, 184, 48, 0.15);
+  border-top-color: #14b830;
+  animation: overlaySpinRing 0.7s linear infinite;
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes overlaySpinRing {
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -336,6 +386,16 @@ nav,
   .route-progress__bar {
     animation: none;
     width: 100%;
+  }
+
+  .route-overlay {
+    animation: none;
+    opacity: 1;
+  }
+
+  .route-overlay__ring {
+    animation: none;
+    border-top-color: #14b830;
   }
 
   .image-skeleton {
