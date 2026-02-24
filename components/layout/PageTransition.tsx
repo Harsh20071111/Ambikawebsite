@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const variants = {
     hidden: {
@@ -30,23 +30,42 @@ const variants = {
 
 export function PageTransition({ children }: { children: ReactNode }) {
     const pathname = usePathname();
+    const [showProgress, setShowProgress] = useState(false);
+    const prevPathname = useRef(pathname);
 
-    // Scroll to top on route change
+    // Show progress bar + scroll to top on route change
     useEffect(() => {
-        window.scrollTo({ top: 0, behavior: "instant" });
+        if (prevPathname.current !== pathname) {
+            prevPathname.current = pathname;
+            setShowProgress(true);
+            window.scrollTo({ top: 0, behavior: "instant" });
+
+            // Hide progress bar after animation completes
+            const timer = setTimeout(() => setShowProgress(false), 900);
+            return () => clearTimeout(timer);
+        }
     }, [pathname]);
 
     return (
-        <AnimatePresence mode="wait" initial={false}>
-            <motion.main
-                key={pathname}
-                variants={variants}
-                initial="hidden"
-                animate="enter"
-                exit="exit"
-            >
-                {children}
-            </motion.main>
-        </AnimatePresence>
+        <>
+            {/* Route change progress bar */}
+            {showProgress && (
+                <div className="route-progress" aria-hidden="true">
+                    <div className="route-progress__bar" />
+                </div>
+            )}
+
+            <AnimatePresence mode="wait" initial={false}>
+                <motion.main
+                    key={pathname}
+                    variants={variants}
+                    initial="hidden"
+                    animate="enter"
+                    exit="exit"
+                >
+                    {children}
+                </motion.main>
+            </AnimatePresence>
+        </>
     );
 }

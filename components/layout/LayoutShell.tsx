@@ -3,7 +3,6 @@
 import { usePathname } from "next/navigation";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
-import { PageLoader } from "@/components/layout/PageLoader";
 import { PageTransition } from "@/components/layout/PageTransition";
 
 export function LayoutShell({ children }: { children: React.ReactNode }) {
@@ -16,7 +15,6 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <PageLoader />
       <Navbar />
       <PageTransition>{children}</PageTransition>
       <Footer />
