@@ -4,24 +4,34 @@ import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
 
 export async function getProducts() {
-  const products = await prisma.product.findMany({
-    orderBy: { createdAt: "desc" },
-  });
-  // Serialize Decimal to number to cross "use server" boundary safely
-  return products.map((p) => ({
-    ...p,
-    price: Number(p.price),
-  }));
+  try {
+    const products = await prisma.product.findMany({
+      orderBy: { createdAt: "desc" },
+    });
+    // Serialize Decimal to number to cross "use server" boundary safely
+    return products.map((p) => ({
+      ...p,
+      price: Number(p.price),
+    }));
+  } catch (error) {
+    console.error("Failed to fetch products:", error);
+    return [];
+  }
 }
 
 export async function getProductById(id: string) {
-  const product = await prisma.product.findUnique({ where: { id } });
-  if (!product) return null;
+  try {
+    const product = await prisma.product.findUnique({ where: { id } });
+    if (!product) return null;
 
-  return {
-    ...product,
-    price: Number(product.price),
-  };
+    return {
+      ...product,
+      price: Number(product.price),
+    };
+  } catch (error) {
+    console.error("Failed to fetch product:", error);
+    return null;
+  }
 }
 
 export async function createProduct(data: {

@@ -4,9 +4,14 @@ import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
 
 export async function getEnquiries() {
-  return await prisma.enquiry.findMany({
-    orderBy: { createdAt: "desc" },
-  });
+  try {
+    return await prisma.enquiry.findMany({
+      orderBy: { createdAt: "desc" },
+    });
+  } catch (error) {
+    console.error("Failed to fetch enquiries:", error);
+    return [];
+  }
 }
 
 export async function createEnquiry(data: {
@@ -14,22 +19,32 @@ export async function createEnquiry(data: {
   email: string;
   message: string;
 }) {
-  const enquiry = await prisma.enquiry.create({
-    data: {
-      name: data.name,
-      email: data.email,
-      message: data.message,
-    },
-  });
-  revalidatePath("/admin/enquiries");
-  return enquiry;
+  try {
+    const enquiry = await prisma.enquiry.create({
+      data: {
+        name: data.name,
+        email: data.email,
+        message: data.message,
+      },
+    });
+    revalidatePath("/admin/enquiries");
+    return enquiry;
+  } catch (error) {
+    console.error("Failed to create enquiry:", error);
+    return null;
+  }
 }
 
 export async function updateEnquiryStatus(id: string, status: string) {
-  const enquiry = await prisma.enquiry.update({
-    where: { id },
-    data: { status },
-  });
-  revalidatePath("/admin/enquiries");
-  return enquiry;
+  try {
+    const enquiry = await prisma.enquiry.update({
+      where: { id },
+      data: { status },
+    });
+    revalidatePath("/admin/enquiries");
+    return enquiry;
+  } catch (error) {
+    console.error("Failed to update enquiry status:", error);
+    return null;
+  }
 }
