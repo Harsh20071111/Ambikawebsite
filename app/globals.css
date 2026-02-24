@@ -51,6 +51,17 @@
   --color-agri-cream: #fcfbf8;
   --color-agri-gold: #f4c025;
   --color-agri-gold-dark: #dca510;
+  --animate-shimmer: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 :root {
