@@ -207,3 +207,242 @@ html {
 .translate-z-50 {
   transform: translateZ(50px);
 }
+
+/* ============================================
+   PAGE LOADER — Branded Loading Screen
+   ============================================ */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0d1a12 0%, #1a4d2e 50%, #0d1a12 100%);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-loader--fade {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.page-loader__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  animation: loaderAppear 0.5s ease-out;
+}
+
+.page-loader__logo {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-loader__mark {
+  position: relative;
+  z-index: 2;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #4ade80 0%, #14b830 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: white;
+  letter-spacing: -0.02em;
+  animation: logoPulse 1.8s ease-in-out infinite;
+  box-shadow: 0 0 30px rgba(74, 222, 128, 0.35),
+    0 0 60px rgba(20, 184, 48, 0.15);
+}
+
+.page-loader__ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 18px;
+  border: 2px solid transparent;
+  border-top-color: rgba(74, 222, 128, 0.6);
+  border-right-color: rgba(74, 222, 128, 0.2);
+  animation: ringSpin 1.2s linear infinite;
+}
+
+.page-loader__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.page-loader__brand {
+  font-family: var(--font-sans);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 0.15em;
+}
+
+.page-loader__sub {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+.page-loader__bar {
+  width: 120px;
+  height: 3px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.page-loader__bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #4ade80, #14b830);
+  animation: progressFill 1.2s ease-out forwards;
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
+}
+
+@keyframes loaderAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+@keyframes ringSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes progressFill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* ============================================
+   IMAGE SKELETON — Shimmer Placeholder
+   ============================================ */
+.image-skeleton-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-skeleton {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    110deg,
+    #e8e2ce 0%,
+    #f5f3ee 40%,
+    #e8e2ce 60%
+  );
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.5s ease-in-out infinite;
+  border-radius: inherit;
+}
+
+.image-skeleton__img {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.image-skeleton__img--loaded {
+  opacity: 1;
+}
+
+@keyframes skeletonShimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ============================================
+   SMOOTHNESS — GPU + Mobile + Font Rendering
+   ============================================ */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Remove 300ms mobile tap delay */
+html,
+body {
+  touch-action: manipulation;
+}
+
+/* GPU hints for commonly animated elements */
+nav,
+.page-loader,
+[class*="transition"],
+[class*="animate"] {
+  will-change: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* ============================================
+   REDUCED MOTION — Accessibility
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .page-loader {
+    transition: none;
+  }
+
+  .page-loader__mark,
+  .page-loader__ring,
+  .page-loader__bar-fill {
+    animation: none;
+  }
+
+  .image-skeleton {
+    animation: none;
+    background: #e8e2ce;
+  }
+}
