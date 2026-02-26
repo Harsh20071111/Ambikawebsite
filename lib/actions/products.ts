@@ -78,14 +78,14 @@ export async function updateProduct(
   id: string,
   data: {
     name?: string;
-    description?: string;
+    description?: string | null;
     price?: number;
     category?: string;
     status?: string;
-    imageUrl?: string;
+    imageUrl?: string | null;
     images?: string[];
-    buildType?: string;
-    capacity?: string;
+    buildType?: string | null;
+    capacity?: string | null;
   },
 ) {
   try {

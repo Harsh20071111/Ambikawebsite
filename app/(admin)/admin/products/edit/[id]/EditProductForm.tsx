@@ -212,20 +212,20 @@ export default function EditProductForm({ product }: { product: Product }) {
             const parsedPrice = Number.parseFloat(form.price);
             if (isNaN(parsedPrice)) {
                 setFormError("Please enter a valid price.");
-                setUploading(false);
+                setLoading(false);
                 return;
             }
 
             const result = await updateProduct(product.id, {
                 name: form.name.trim(),
-                description: form.description.trim() || undefined,
+                description: form.description.trim() || null,
                 price: parsedPrice,
                 category: form.category,
                 status: form.status,
-                imageUrl: form.imageUrl || undefined,
+                imageUrl: form.imageUrl || null,
                 images: form.images,
-                buildType: form.buildType || undefined,
-                capacity: form.capacity || undefined,
+                buildType: form.buildType === "none" ? null : (form.buildType || null),
+                capacity: form.capacity === "none" ? null : (form.capacity || null),
             });
 
             if (result.success) {
@@ -448,8 +448,8 @@ export default function EditProductForm({ product }: { product: Product }) {
                                         onDragLeave={handleDragLeave}
                                         onClick={() => fileInputRef.current?.click()}
                                         className={`relative w-full aspect-[21/9] rounded-xl border-2 border-dashed cursor-pointer transition-all duration-200 flex flex-col items-center justify-center gap-3 ${dragActive
-                                                ? "border-primary bg-primary/5 scale-[1.01]"
-                                                : "border-border hover:border-primary/50 hover:bg-muted/30"
+                                            ? "border-primary bg-primary/5 scale-[1.01]"
+                                            : "border-border hover:border-primary/50 hover:bg-muted/30"
                                             }`}
                                     >
                                         <div
