@@ -1,6 +1,6 @@
 "use client";
 
-import { Trash2 } from "lucide-react";
+import { Pencil, Trash2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -117,19 +117,25 @@ export function ProductsTable({ products }: { products: Product[] }) {
                   </td>
                   <td className="px-6 py-4">
                     <span
-                      className={`text-xs font-medium px-2.5 py-1 rounded-full ${
-                        product.status === "Active"
-                          ? "bg-green-100 text-green-700"
-                          : product.status === "Out of Stock"
-                            ? "bg-amber-100 text-amber-700"
-                            : "bg-red-100 text-red-700"
-                      }`}
+                      className={`text-xs font-medium px-2.5 py-1 rounded-full ${product.status === "Active"
+                        ? "bg-green-100 text-green-700"
+                        : product.status === "Out of Stock"
+                          ? "bg-amber-100 text-amber-700"
+                          : "bg-red-100 text-red-700"
+                        }`}
                     >
                       {product.status}
                     </span>
                   </td>
                   <td className="px-6 py-4 text-right">
                     <div className="flex items-center justify-end gap-2">
+                      <Link
+                        href={`/admin/products/edit/${product.id}`}
+                        className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                        title="Edit"
+                      >
+                        <Pencil className="w-4 h-4" />
+                      </Link>
                       <button
                         type="button"
                         onClick={() => handleDelete(product.id, product.name)}

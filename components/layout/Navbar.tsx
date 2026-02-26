@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -35,29 +35,26 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        useScrolledStyle
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${useScrolledStyle
           ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 py-3"
           : "bg-transparent py-5"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
             <div
-              className={`w-10 h-10 rounded-lg flex items-center justify-center font-extrabold text-sm transition-colors duration-300 ${
-                useScrolledStyle
+              className={`w-10 h-10 rounded-lg flex items-center justify-center font-extrabold text-sm transition-colors duration-300 ${useScrolledStyle
                   ? "bg-[#1a4d2e] text-white"
                   : "bg-white/15 backdrop-blur-sm text-white border border-white/20"
-              }`}
+                }`}
             >
               A
             </div>
             <span
-              className={`text-xl font-bold tracking-tight transition-colors duration-300 ${
-                useScrolledStyle ? "text-[#1c180d]" : "text-white"
-              }`}
+              className={`text-xl font-bold tracking-tight transition-colors duration-300 ${useScrolledStyle ? "text-[#1c180d]" : "text-white"
+                }`}
             >
               <span
                 className={useScrolledStyle ? "text-[#1a4d2e]" : "text-white"}
@@ -81,11 +78,10 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`text-sm font-medium transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:transition-all hover:after:w-full ${
-                  useScrolledStyle
+                className={`text-sm font-medium transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:transition-all hover:after:w-full ${useScrolledStyle
                     ? "text-gray-600 hover:text-[#1a4d2e] after:bg-[#1a4d2e]"
                     : "text-white/80 hover:text-white after:bg-white"
-                }`}
+                  }`}
               >
                 {link.name}
               </Link>
@@ -98,22 +94,20 @@ export function Navbar() {
               href="https://wa.me/919574245964"
               target="_blank"
               rel="noopener noreferrer"
-              className={`hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all ${
-                useScrolledStyle
+              className={`hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all ${useScrolledStyle
                   ? "bg-[#25D366] hover:bg-[#20BD5A] text-white shadow-sm"
                   : "bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-sm"
-              }`}
+                }`}
             >
               <MessageCircle className="w-4 h-4" />
               WhatsApp
             </a>
             <Button
               asChild
-              className={`hidden md:inline-flex font-semibold rounded-lg gap-2 transition-all ${
-                useScrolledStyle
+              className={`hidden md:inline-flex font-semibold rounded-lg gap-2 transition-all ${useScrolledStyle
                   ? "bg-[#1a4d2e] hover:bg-[#164025] text-white shadow-sm"
                   : "bg-white/15 hover:bg-white/25 text-white border border-white/20 backdrop-blur-sm"
-              }`}
+                }`}
             >
               <a href="tel:+919574245964">
                 <Phone className="w-4 h-4" />
@@ -126,16 +120,16 @@ export function Navbar() {
               <SheetTrigger asChild className="lg:hidden">
                 <button
                   type="button"
-                  className={`p-2 rounded-lg transition-colors ${
-                    useScrolledStyle
+                  className={`p-2 rounded-lg transition-colors ${useScrolledStyle
                       ? "text-[#1c180d] hover:bg-gray-100"
                       : "text-white hover:bg-white/10"
-                  }`}
+                    }`}
                 >
                   <Menu className="w-6 h-6" />
                 </button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] bg-white p-0">
+                <SheetTitle className="sr-only">Menu</SheetTitle>
                 <div className="flex flex-col h-full">
                   <div className="p-6 border-b border-gray-200">
                     <Link

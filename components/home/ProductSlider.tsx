@@ -185,7 +185,7 @@ export function ProductSlider({
             className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center w-full"
           >
             {/* Left Content */}
-            <div className="flex flex-col gap-6 lg:gap-8 text-left lg:col-span-4 z-20">
+            <div className="flex flex-col gap-6 lg:gap-8 text-left lg:col-span-4 z-20 min-h-[460px] sm:min-h-[420px] lg:min-h-0 justify-start">
               {/* Badges */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -215,7 +215,7 @@ export function ProductSlider({
                     {product.nameHighlight}
                   </span>
                 </h1>
-                <p className="text-lg md:text-xl text-gray-300 max-w-xl font-medium leading-relaxed drop-shadow-md">
+                <p className="text-lg md:text-xl text-gray-300 max-w-xl font-medium leading-relaxed drop-shadow-md line-clamp-3 sm:line-clamp-4 lg:line-clamp-none">
                   {product.description}
                 </p>
               </motion.div>
